@@ -11,6 +11,38 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  background-image: var(--page_background-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: var(--font_main, sans-serif);
+  min-inline-size: 375px;
+  max-inline-size: 700px;
   min-block-size: 100dvb;
+}
+
+.header {
+  inline-size: clamp(375px, 100%, 700px);
+  block-size: 327px;
+  margin: 100px auto;
+}
+
+.header_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  inline-size: 100%;
+  block-size: 100%;
+  font-family: var(--font_accent, sans-serif);
+  text-align: center;
+  background-color: var(--header_bg_color);
+  text-transform: uppercase;
+}
+
+.header_container h1 {
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);;
+  margin-bottom: 20px;
+}
+
+.header_container h2 {
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
