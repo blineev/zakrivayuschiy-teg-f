@@ -11,17 +11,18 @@
 */
 
 .page {
-  background-image: var(--page_background-gradient);
+  background-image: var(--page_bg-gradient);
   background-attachment: fixed;
   background-size: cover;
   font-family: var(--font_main, sans-serif);
+  font-size: 18px;
   min-inline-size: 375px;
   max-inline-size: 700px;
   min-block-size: 100dvb;
 }
 
 .header {
-  inline-size: clamp(375px, 100%, 700px);
+  inline-size: var(--blocks_width, clamp(375px, 100%, 700px));
   block-size: 327px;
   margin: 100px auto;
 }
@@ -34,8 +35,9 @@
   block-size: 100%;
   font-family: var(--font_accent, sans-serif);
   text-align: center;
-  background-color: var(--header_bg_color);
+  background-color: var(--blocks_bg_color, rgba(255, 255, 255, 1));
   text-transform: uppercase;
+  border: 2px solid var(--blocks_border_color, #000000)
 }
 
 .header_container h1 {
@@ -45,4 +47,71 @@
 
 .header_container h2 {
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+}
+
+.main {
+  background-color: var(--page_bg-color, rgba(255, 255, 255, 1));
+  inline-size: var(--blocks_width, clamp(375px, 100%, 700px));
+}
+
+.article {
+  inline-size: 100%;
+  background-color: var(--blocks_bg_color, rgba(255, 255, 255, 1));
+  border: 2px solid var(--blocks_border_color, #000000);
+  margin-bottom: 50px;
+}
+
+.article_title {
+  margin: 4px 10px;
+  font-weight: 715;
+}
+
+.article picture img {
+  margin-bottom: 27px;
+  inline-size: 100%;
+}
+
+.article p {
+  margin: 0 25px 25px;
+  font-weight: 410;
+  line-height: 1.17;
+}
+
+.like_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 25px 25px 177px;
+}
+
+.like_container svg {
+  margin: 7px 10px 7px 0;
+}
+
+.article_button {
+  inline-size: 130px;
+  block-size: 38px;
+  background-color: transparent;
+  border: 2px solid var(--blocks_border_color, #000000);
+  font-family: var(--font_accent, sans-serif);
+  font-family: Press Start 2P;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 0.9;
+}
+
+.save_button-container {
+  padding-bottom: 100px;
+}
+
+.save_button {
+  inline-size: 306px;
+  block-size: 84px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button_bg_color, rgba(255, 255, 255, 1));
+  border: 2px solid var(--blocks_border_color, #000000);
 }
