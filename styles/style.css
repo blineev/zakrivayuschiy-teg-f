@@ -55,6 +55,8 @@
 }
 
 .article {
+  display: flex;
+  flex-direction: column;
   inline-size: 100%;
   background-color: var(--blocks_bg_color, rgba(255, 255, 255, 1));
   border: 2px solid var(--blocks_border_color, #000000);
@@ -81,7 +83,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 25px 25px 177px;
+  margin: 0 25px 25px auto;
 }
 
 .like_container svg {
