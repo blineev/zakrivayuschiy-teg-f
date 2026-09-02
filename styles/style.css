@@ -79,18 +79,18 @@
   line-height: 1.17;
 }
 
-.like_container {
+.button_like {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0 25px 25px auto;
 }
 
-.like_container svg {
+.button_like svg {
   margin: 7px 10px 7px 0;
 }
 
-.article_button {
+.button_like {
   inline-size: 130px;
   block-size: 38px;
   background-color: transparent;
@@ -116,4 +116,12 @@
   align-items: center;
   background-color: var(--button_bg_color, rgba(255, 255, 255, 1));
   border: 2px solid var(--blocks_border_color, #000000);
+}
+
+@media (width >= 700px) {
+
+  .header {
+    block-size: 368px;
+  }
+
 }
