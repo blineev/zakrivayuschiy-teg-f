@@ -16,6 +16,7 @@
   background-size: cover;
   font-family: var(--font_main, sans-serif);
   font-size: 18px;
+  font-variation-settings: 'wght' var(--font-weight-main, 410);
   min-inline-size: 375px;
   max-inline-size: 700px;
   min-block-size: 100dvb;
@@ -23,7 +24,7 @@
 
 .header {
   inline-size: var(--blocks_width, clamp(375px, 100%, 700px));
-  block-size: 327px;
+  block-size: var(--header_height, clamp(327px, 100dvb, 368px));
   margin: 100px auto;
 }
 
@@ -65,7 +66,36 @@
 
 .article_title {
   margin: 4px 10px;
-  font-weight: 715;
+  font-size: 18px;
+  font-variation-settings: 'wght' var(--font-weight-title, 715);
+}
+
+.article_image-container {
+  position: relative;
+}
+
+.article_label {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  mix-blend-mode: hard-light;
+  font-family: var(--font_accent, sans-serif);
+  font-size: 14px;
+  text-shadow: 
+    -1px -1px 0 var(--label_color, #fff),
+    1px -1px 0 var(--label_color, #fff),
+    -1px 1px 0 var(--label_color, #fff),
+    1px 1px 0 var(--label_color, #fff);
+}
+
+@supports (-webkit-text-stroke: 1px var(--label_color, #fff)) or (text-stroke: 1px var(--label_color, #fff)) {
+  
+  .article_label {
+    -webkit-text-stroke: 1px var(--label_color, #fff);
+    text-stroke: 1px var(--label_color, #fff);
+    text-shadow: none;
+  }
 }
 
 .article picture img {
@@ -75,31 +105,37 @@
 
 .article p {
   margin: 0 25px 25px;
-  font-weight: 410;
   line-height: 1.17;
 }
 
-.button_like {
+.card__like-button {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0 25px 25px auto;
 }
 
-.button_like svg {
-  margin: 7px 10px 7px 0;
+.card__like-button svg {
+  position: absolute;
+  left: -49px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
 }
 
-.button_like {
+.card__like-button {
   inline-size: 130px;
   block-size: 38px;
   background-color: transparent;
   border: 2px solid var(--blocks_border_color, #000000);
   font-family: var(--font_accent, sans-serif);
-  font-family: Press Start 2P;
   font-weight: 400;
   font-size: 14px;
   line-height: 0.9;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .save_button-container {
@@ -118,10 +154,7 @@
   border: 2px solid var(--blocks_border_color, #000000);
 }
 
-@media (width >= 700px) {
-
-  .header {
-    block-size: 368px;
-  }
+@media (width <= 375px) {
+  
 
 }

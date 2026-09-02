@@ -1,7 +1,9 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
     --font_main: 'Inter-Variable';
-    --font_accent: 'PressSrart2P-Regular';
+    --font_accent: 'PressStart2P-Regular';
+    --font-weight-main: 410;
+    --font-weight-title: 715;
     --page_bg-gradient:
         repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
         repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
@@ -9,6 +11,8 @@
     --page_bg-color: rgba(255, 255, 255, 1);
     --blocks_bg_color: rgba(255, 255, 255, 1);
     --blocks_width: clamp(375px, 100%, 700px);
+    --header_height: clamp(327px, 279.69px + 12.615vw, 368px);
     --blocks_border_color: #000000;
     --button_bg-color: rgba(255, 255, 255, 1);
+    --label_color: #fff;
 }
