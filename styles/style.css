@@ -112,6 +112,10 @@
   }
 }
 
+.filter_contrast {
+  filter: contrast(0.8)
+}
+
 .filter_grayscale {
   filter: grayscale(0.8);
 }
@@ -216,6 +220,7 @@
 }
 
 .dialog {
+  display: none;
   padding: 30px 40px;
   background-color: var(--page_bg-color, #ffffff);
   border: 2px solid var(--blocks_border_color, #000000);
