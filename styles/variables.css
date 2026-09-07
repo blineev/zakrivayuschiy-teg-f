@@ -15,4 +15,8 @@
     --blocks_border_color: #000000;
     --button_bg-color: rgba(255, 255, 255, 1);
     --label_color: #fff;
+    --accent_color: #000;
+    --diff_color: #fff;
+    --contour-color: #000000;
+    --animation-fill-color: #FF0000;
 }
