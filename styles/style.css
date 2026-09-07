@@ -230,6 +230,52 @@
   block-size: 21px;
 }
 
+.dialog {
+  inline-size: 353px;
+  block-size: 191px;
+  padding: 30px 40px;
+  background-color: var(--page_bg-color, #ffffff);
+  border: 2px solid var(--blocks_border_color, #000000);
+  color: var(--blocks_border_color, #000000);
+  font-family: var(--font_accent, sans-serif);
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.dialog_icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.dialog_content {
+  inline-size: 261px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 1.5;
+  gap: 20px;
+}
+
+.dialog__button {
+  inline-size: 100%;
+  block-size: 38px;
+  line-height: 0.9;
+  border: 2px solid var(--blocks_border_color, #000);
+}
+
 .card__like-button,
 .save_button,
 .dialog__button {
@@ -343,6 +389,11 @@
   .save_button-icon {
     inline-size: 28px;
     block-size: 28px;
+  }
+
+  .dialog {
+    inline-size: 341px;
+    padding: 30px 30px;
   }
 
 }
