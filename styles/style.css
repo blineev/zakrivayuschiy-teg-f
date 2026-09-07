@@ -42,7 +42,7 @@
 }
 
 .header_container h1 {
-  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);;
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
   margin-bottom: 20px;
 }
 
@@ -137,7 +137,7 @@
 }
 
 .filter_multiple {
-  filter: sepia(0.3) hue-rotate(100deg) contrast(0.5) brightness(0.4);
+  filter: contrast(0.5) sepia(0.3) hue-rotate(100deg) brightness(0.4);
 }
 
 .article p {
@@ -161,7 +161,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  block-size: 38px; 
+  block-size: 38px;
   inline-size: 38px;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
@@ -173,21 +173,6 @@
 
 .card__icon-button:focus-visible {
   border-color: var(--accent_color, #000000);
-}
-
-.card__like-button {
-  inline-size: 130px;
-  block-size: 38px;
-  background-color: transparent;
-  border: 2px solid var(--blocks_border_color, #000000);
-  font-family: var(--font_accent, sans-serif);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 0.9;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .card__like-button {
@@ -231,8 +216,6 @@
 }
 
 .dialog {
-  inline-size: 353px;
-  block-size: 191px;
   padding: 30px 40px;
   background-color: var(--page_bg-color, #ffffff);
   border: 2px solid var(--blocks_border_color, #000000);
