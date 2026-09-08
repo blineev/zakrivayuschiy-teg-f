@@ -1,1 +1,1 @@
-git@github.com:blineev/zakrivayuschiy-teg-f.git
+https://blineev.github.io/zakrivayuschiy-teg-f/
