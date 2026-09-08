@@ -16,7 +16,7 @@
   background-size: cover;
   font-family: var(--font_main, sans-serif);
   font-size: 18px;
-  font-variation-settings: 'wght' var(--font-weight-main, 410);
+  font-variation-settings: "wght" var(--font-weight-main, 410);
   min-inline-size: 375px;
   max-inline-size: 700px;
   min-block-size: 100dvb;
@@ -67,7 +67,7 @@
 .article_title {
   margin: 4px 10px;
   font-size: 18px;
-  font-variation-settings: 'wght' var(--font-weight-title, 715);
+  font-variation-settings: "wght" var(--font-weight-title, 715);
 }
 
 .article_image-container {
@@ -80,6 +80,11 @@
   border-bottom: 2px solid var(--blocks_border_color, #000000);
 }
 
+.article_image-container picture {
+  object-fit: cover;
+  object-position: center;
+}
+
 .article_label {
   position: absolute;
   top: 25px;
@@ -88,7 +93,7 @@
   mix-blend-mode: hard-light;
   font-family: var(--font_accent, sans-serif);
   font-size: 14px;
-  text-shadow: 
+  text-shadow:
     -1px -1px 0 var(--label_color, #fff),
     1px -1px 0 var(--label_color, #fff),
     -1px 1px 0 var(--label_color, #fff),
@@ -103,8 +108,8 @@
   mix-blend-mode: difference;
 }
 
-@supports (-webkit-text-stroke: 1px var(--label_color, #fff)) or (text-stroke: 1px var(--label_color, #fff)) {
-  
+@supports (-webkit-text-stroke: 1px var(--label_color, #fff)) or
+  (text-stroke: 1px var(--label_color, #fff)) {
   .article_label {
     -webkit-text-stroke: 1px var(--label_color, #fff);
     text-stroke: 1px var(--label_color, #fff);
@@ -125,7 +130,7 @@
 }
 
 .filter_invert {
-  filter: invert(1);
+  filter: invert(0.1) brightness(1.5) contrast(1.5);
 }
 
 .filter_sepia {
@@ -133,11 +138,11 @@
 }
 
 .filter_blur {
-  filter: blur(15px);
+  filter: blur(2px);
 }
 
 .filter_multiple {
-  filter: contrast(0.5) brightness(0.8);
+  filter: contrast(1.5) brightness(1.2);
 }
 
 .article p {
@@ -188,6 +193,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .save_button-container {
@@ -195,6 +201,7 @@
 }
 
 .save_button {
+  cursor: pointer;
   inline-size: 335px;
   block-size: 55px;
   margin: 0 auto;
@@ -216,7 +223,6 @@
 }
 
 .dialog {
-  display: none;
   padding: 30px 40px;
   background-color: var(--page_bg-color, #ffffff);
   border: 2px solid var(--blocks_border_color, #000000);
@@ -254,6 +260,7 @@
 }
 
 .dialog__button {
+  cursor: pointer;
   inline-size: 100%;
   block-size: 38px;
   line-height: 0.9;
@@ -279,7 +286,7 @@
 .card__like-button::before,
 .save_button::before,
 .dialog__button::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: var(--blocks_border_color, #000);
@@ -357,9 +364,7 @@
   animation: sparks-flash 0.3s ease-in 0.3s;
 }
 
-
 @media (width <= 375px) {
-  
   .header {
     margin: 100px auto 100px;
   }
@@ -379,5 +384,4 @@
     inline-size: 341px;
     padding: 30px 30px;
   }
-
 }
