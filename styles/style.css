@@ -45,7 +45,7 @@
   margin-block-end: 20px;
 }
 
-.header_container h2 {
+.header_container p {
   font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
 
@@ -345,7 +345,7 @@ button {
   animation: sparks-flash 0.3s ease-in 0.3s;
 }
 
-@media (width <= 375px) {
+@media (width < 376px) {
   .header {
     margin: 100px auto 100px;
   }
